@@ -1,8 +1,8 @@
-FROM tomcat:7-jre8
+FROM tomcat:8-jre8
 
 MAINTAINER juliens@microsoft.com
 
-COPY drop/* /usr/local/tomcat/webapps/
+COPY drop/*.war /usr/local/tomcat/webapps/
 
 EXPOSE 8080
 
