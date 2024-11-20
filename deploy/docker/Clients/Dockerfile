@@ -1,7 +1,8 @@
-FROM tomcat:8-jre8
+FROM tomcat:7-jre8 
 
-COPY drop/*.war /usr/local/tomcat/webapps/
+COPY drop/* /usr/local/tomcat/webapps/ 
+COPY drop/index.jsp /usr/local/tomcat/webapps/ROOT/index.jsp 
 
-EXPOSE 8080
+EXPOSE 8080 
 
-ENTRYPOINT ["catalina.sh", "run"]
+ENTRYPOINT ["catalina.sh", "run"] 
